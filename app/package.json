@@ -1,0 +1,10 @@
+{
+  "name": "ic-paper-studio-harness",
+  "private": true,
+  "description": "Harness CLIs for the embedded Omnigent host: Claude Code (claude-sdk), Codex and Pi (the Studio UI is built separately from ../ui)",
+  "dependencies": {
+    "@anthropic-ai/claude-code": "2.1.283",
+    "@openai/codex": "0.157.1",
+    "@earendil-works/pi-coding-agent": "0.85.1"
+  }
+}

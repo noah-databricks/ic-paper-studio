@@ -1,0 +1,21 @@
+# What the app and the setup job run on. The catalog is not created here: pass one you own with --var catalog=<name>.
+# The setup job creates the schema, its volumes and tables.
+resources:
+  sql_warehouses:
+    studio_warehouse:
+      name: ic-paper-studio
+      cluster_size: 2X-Small
+      min_num_clusters: 1
+      max_num_clusters: 1
+      auto_stop_mins: 10
+      enable_serverless_compute: true
+      warehouse_type: PRO
+
+  vector_search_endpoints:
+    studio_search:
+      name: ${var.search_endpoint}
+      endpoint_type: STANDARD
+
+  experiments:
+    studio_traces:
+      name: /Users/${workspace.current_user.userName}/ic-paper-studio

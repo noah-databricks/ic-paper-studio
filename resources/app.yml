@@ -1,0 +1,51 @@
+# The Studio. `bundle deploy` deploys and starts it; it is usable once the setup job has built the library.
+resources:
+  apps:
+    studio:
+      name: ${var.app_name}
+      description: "IC Paper Studio: drafts credit papers into the lender's Word templates, a source for every point (synthetic demo)"
+      source_code_path: ../app
+      compute_size: LARGE
+      lifecycle:
+        started: true
+      user_api_scopes:
+        - sql
+        - files.files
+      resources:
+        - name: sql-warehouse
+          sql_warehouse:
+            id: ${resources.sql_warehouses.studio_warehouse.id}
+            permission: CAN_USE
+        - name: experiment
+          experiment:
+            experiment_id: ${resources.experiments.studio_traces.id}
+            permission: CAN_EDIT
+        - name: claude-sonnet
+          serving_endpoint: {name: databricks-claude-sonnet-5-5, permission: CAN_QUERY}
+        - name: claude-opus
+          serving_endpoint: {name: databricks-claude-opus-5-5, permission: CAN_QUERY}
+        - name: gpt-5-5
+          serving_endpoint: {name: databricks-gpt-5-5, permission: CAN_QUERY}
+        - name: gpt-5-4
+          serving_endpoint: {name: databricks-gpt-5-4, permission: CAN_QUERY}
+      config:
+        command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--timeout-graceful-shutdown", "4"]
+        env:
+          - name: WAREHOUSE_ID
+            value_from: sql-warehouse
+          - name: UC_CATALOG
+            value: ${var.catalog}
+          - name: UC_SCHEMA
+            value: ${var.schema}
+          - name: DEAL_ID
+            value: QCP-RE-2026-0417
+          - name: STUDIO_MODELS
+            value: databricks-claude-sonnet-5-5,databricks-claude-opus-5-5
+          - name: STUDIO_GPT_MODELS
+            value: databricks-gpt-5-5,databricks-gpt-5-4
+          - name: MLFLOW_EXPERIMENT_ID
+            value_from: experiment
+          - name: MLFLOW_TRACKING_URI
+            value: databricks
+          - name: MLFLOW_TRACING_SQL_WAREHOUSE_ID
+            value_from: sql-warehouse

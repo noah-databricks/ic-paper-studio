@@ -1,0 +1,26 @@
+[
+  {
+    "template_id": "screening",
+    "name": "Initial credit screening paper",
+    "docx": "screening_paper_template.docx",
+    "spec": "screening_paper_spec.json",
+    "purpose": "A short first look at a new opportunity, to decide whether it is worth spending time and diligence budget on.",
+    "use_when": "A new borrower or deal at first approach: information is indicative (teaser, IM, management presentation, desktop valuation), no diligence has been done and there is no term sheet. The question is whether to proceed to diligence."
+  },
+  {
+    "template_id": "full_ic",
+    "name": "Investment Committee credit paper",
+    "docx": "credit_paper_template.docx",
+    "spec": "template_spec.json",
+    "purpose": "The full credit approval paper for a new facility, taken to the Investment Committee.",
+    "use_when": "A new facility where diligence is complete: independent valuation, financial or QS due diligence and an indicative term sheet with covenants and conditions precedent. The question is whether to approve the facility."
+  },
+  {
+    "template_id": "variation",
+    "name": "Credit variation paper",
+    "docx": "variation_paper_template.docx",
+    "spec": "variation_paper_spec.json",
+    "purpose": "Approval of a change to an existing Quillwood facility: extension, upsize, covenant reset, waiver or amendment.",
+    "use_when": "The borrower already has a facility with Quillwood and asks to change it. Sources are the existing facility summary, a request letter, compliance certificates and performance reports. The question is whether to agree the change, and on what conditions."
+  }
+]

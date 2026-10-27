@@ -1,0 +1,287 @@
+{
+  "template": "credit_paper_template.docx",
+  "template_id": "full_ic",
+  "name": "Investment Committee credit paper",
+  "slots": [
+    {
+      "tag": "deal_name",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Deal name",
+      "guidance": "Deal name",
+      "preferred_source": "metric:mv_deal_metrics.Deal"
+    },
+    {
+      "tag": "borrower",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Borrower",
+      "guidance": "Borrower entity",
+      "preferred_source": "metric:deals.borrower"
+    },
+    {
+      "tag": "sponsor",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Sponsor",
+      "guidance": "Sponsor group",
+      "preferred_source": "metric:mv_deal_metrics.Sponsor"
+    },
+    {
+      "tag": "facility_summary",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Facility",
+      "guidance": "Facility type, limit and tenor",
+      "preferred_source": "metric:facilities"
+    },
+    {
+      "tag": "ic_date",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "IC date",
+      "guidance": "Investment committee date",
+      "preferred_source": "metric:deals.ic_date"
+    },
+    {
+      "tag": "recommendation_short",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Recommendation",
+      "guidance": "Approve / Approve with conditions / Decline",
+      "preferred_source": "agent"
+    },
+    {
+      "tag": "recommendation",
+      "section": "1. Recommendation and executive summary",
+      "kind": "text",
+      "alias": "Recommendation",
+      "guidance": "State the recommendation and the facility being approved, in one or two sentences.",
+      "preferred_source": "indicative_term_sheet.pdf"
+    },
+    {
+      "tag": "exec_summary",
+      "section": "1. Recommendation and executive summary",
+      "kind": "text",
+      "alias": "Executive summary",
+      "guidance": "Summarise the deal, the key credit strengths and the main risks. Quote source wording where possible.",
+      "preferred_source": "valuation_report.pdf; sponsor_information_memorandum.pdf; qs_initial_report.pdf"
+    },
+    {
+      "tag": "transaction_overview",
+      "section": "2. Transaction overview",
+      "kind": "text",
+      "alias": "Transaction overview",
+      "guidance": "Describe the facility, purpose, security and repayment source.",
+      "preferred_source": "indicative_term_sheet.pdf"
+    },
+    {
+      "tag": "terms_table",
+      "section": "2. Transaction overview",
+      "kind": "table",
+      "alias": "Key terms",
+      "guidance": "Table of key facility terms: limit, tenor, pricing, fees, security, hedging.",
+      "preferred_source": "indicative_term_sheet.pdf"
+    },
+    {
+      "tag": "sources_uses_table",
+      "section": "2. Transaction overview",
+      "kind": "table",
+      "alias": "Sources and uses",
+      "guidance": "Table of sources and uses of funds.",
+      "preferred_source": "qs_initial_report.pdf; metric:mv_deal_metrics"
+    },
+    {
+      "tag": "sponsor_overview",
+      "section": "3. Sponsor",
+      "kind": "text",
+      "alias": "Sponsor overview",
+      "guidance": "Describe the sponsor's history, strategy, management and relationship with Quillwood.",
+      "preferred_source": "sponsor_information_memorandum.pdf"
+    },
+    {
+      "tag": "sponsor_track_record_table",
+      "section": "3. Sponsor",
+      "kind": "table",
+      "alias": "Sponsor track record",
+      "guidance": "Table of the sponsor's recent completed projects and outcomes.",
+      "preferred_source": "sponsor_information_memorandum.pdf"
+    },
+    {
+      "tag": "sponsor_financials",
+      "section": "3. Sponsor",
+      "kind": "text",
+      "alias": "Sponsor financial position",
+      "guidance": "Summarise the guarantor's balance sheet and capacity to support the guarantee.",
+      "preferred_source": "sponsor_information_memorandum.pdf"
+    },
+    {
+      "tag": "project_description",
+      "section": "4. Project and site",
+      "kind": "text",
+      "alias": "Project description",
+      "guidance": "Describe the site, location and approved development.",
+      "preferred_source": "valuation_report.pdf"
+    },
+    {
+      "tag": "site_plan_image",
+      "section": "4. Project and site",
+      "kind": "image",
+      "alias": "Site plan",
+      "guidance": "Site plan or project image.",
+      "preferred_source": "valuation_report.pdf (figure)"
+    },
+    {
+      "tag": "valuation_summary",
+      "section": "5. Valuation",
+      "kind": "text",
+      "alias": "Valuation summary",
+      "guidance": "State the valuer, date, bases and values, and the valuer's key assumptions.",
+      "preferred_source": "valuation_report.pdf"
+    },
+    {
+      "tag": "valuation_table",
+      "section": "5. Valuation",
+      "kind": "table",
+      "alias": "Valuation table",
+      "guidance": "Table of valuation bases and values, or the comparable sales evidence.",
+      "preferred_source": "valuation_report.pdf"
+    },
+    {
+      "tag": "rent_comparables_chart",
+      "section": "5. Valuation",
+      "kind": "image",
+      "alias": "Rent comparables chart",
+      "guidance": "Chart of rent or sales evidence.",
+      "preferred_source": "valuation_report.pdf (figure)"
+    },
+    {
+      "tag": "construction_summary",
+      "section": "6. Construction and builder",
+      "kind": "text",
+      "alias": "Construction summary",
+      "guidance": "Summarise the cost plan, contingency, program and the QS's findings.",
+      "preferred_source": "qs_initial_report.pdf"
+    },
+    {
+      "tag": "builder_assessment",
+      "section": "6. Construction and builder",
+      "kind": "text",
+      "alias": "Builder assessment",
+      "guidance": "Summarise the builder's financial capacity, rating and recommended protections.",
+      "preferred_source": "builder_assessment.pdf"
+    },
+    {
+      "tag": "program_chart",
+      "section": "6. Construction and builder",
+      "kind": "image",
+      "alias": "Construction program",
+      "guidance": "Construction program chart.",
+      "preferred_source": "qs_initial_report.pdf (figure)"
+    },
+    {
+      "tag": "market_commentary",
+      "section": "7. Market",
+      "kind": "text",
+      "alias": "Market commentary",
+      "guidance": "Summarise rental market conditions, supply pipeline and outlook.",
+      "preferred_source": "market_report_parramatta.pdf"
+    },
+    {
+      "tag": "market_chart",
+      "section": "7. Market",
+      "kind": "image",
+      "alias": "Market chart",
+      "guidance": "Vacancy, rent growth or supply pipeline chart.",
+      "preferred_source": "market_report_parramatta.pdf (figure)"
+    },
+    {
+      "tag": "financial_analysis",
+      "section": "8. Financial analysis",
+      "kind": "text",
+      "alias": "Financial analysis",
+      "guidance": "Comment on leverage, coverage, equity and the funding profile.",
+      "preferred_source": "metric:mv_deal_metrics; qs_initial_report.pdf"
+    },
+    {
+      "tag": "lvr",
+      "section": "8. Financial analysis",
+      "kind": "metric",
+      "alias": "LVR",
+      "guidance": "LVR",
+      "preferred_source": "metric:mv_deal_metrics.LVR"
+    },
+    {
+      "tag": "ltc",
+      "section": "8. Financial analysis",
+      "kind": "metric",
+      "alias": "LTC",
+      "guidance": "LTC",
+      "preferred_source": "metric:mv_deal_metrics.LTC"
+    },
+    {
+      "tag": "icr",
+      "section": "8. Financial analysis",
+      "kind": "metric",
+      "alias": "Stabilised ICR",
+      "guidance": "ICR",
+      "preferred_source": "metric:mv_deal_metrics.Stabilised ICR"
+    },
+    {
+      "tag": "key_metrics_table",
+      "section": "8. Financial analysis",
+      "kind": "table",
+      "alias": "Key metrics",
+      "guidance": "Table of key credit metrics against covenants, with peer comparison where useful.",
+      "preferred_source": "metric:mv_deal_metrics; covenants"
+    },
+    {
+      "tag": "funding_profile_chart",
+      "section": "8. Financial analysis",
+      "kind": "image",
+      "alias": "Funding profile",
+      "guidance": "Chart of the drawdown or funding profile.",
+      "preferred_source": "qs_initial_report.pdf (figure); metric:cashflow_projection"
+    },
+    {
+      "tag": "portfolio_fit",
+      "section": "9. Portfolio fit",
+      "kind": "text",
+      "alias": "Portfolio fit",
+      "guidance": "Explain how the deal fits the strategy and portfolio limits.",
+      "preferred_source": "metric:mv_portfolio_exposure"
+    },
+    {
+      "tag": "sponsor_concentration",
+      "section": "9. Portfolio fit",
+      "kind": "metric",
+      "alias": "Sponsor concentration",
+      "guidance": "x.x%",
+      "preferred_source": "metric:mv_portfolio_exposure.Concentration"
+    },
+    {
+      "tag": "portfolio_exposure_table",
+      "section": "9. Portfolio fit",
+      "kind": "table",
+      "alias": "Portfolio exposure",
+      "guidance": "Table of exposure by sub-sector or state, before and after this deal.",
+      "preferred_source": "metric:mv_portfolio_exposure"
+    },
+    {
+      "tag": "risks_table",
+      "section": "10. Key risks and mitigants",
+      "kind": "table",
+      "alias": "Risks and mitigants",
+      "guidance": "Table of key risks, rating and mitigants.",
+      "preferred_source": "valuation_report.pdf; qs_initial_report.pdf; builder_assessment.pdf; market_report_parramatta.pdf"
+    },
+    {
+      "tag": "conditions_precedent",
+      "section": "11. Conditions precedent",
+      "kind": "text",
+      "alias": "Conditions precedent",
+      "guidance": "List the conditions precedent to first drawdown.",
+      "preferred_source": "indicative_term_sheet.pdf"
+    }
+  ]
+}

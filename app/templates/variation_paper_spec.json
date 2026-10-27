@@ -1,0 +1,151 @@
+{
+  "template": "variation_paper_template.docx",
+  "template_id": "variation",
+  "name": "Credit variation paper",
+  "slots": [
+    {
+      "tag": "deal_name",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Deal name",
+      "guidance": "Deal name",
+      "preferred_source": "metric:mv_deal_metrics.Deal"
+    },
+    {
+      "tag": "borrower",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Borrower",
+      "guidance": "Borrower entity",
+      "preferred_source": "facility summary"
+    },
+    {
+      "tag": "sponsor",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Sponsor",
+      "guidance": "Sponsor or owner",
+      "preferred_source": "metric:mv_deal_metrics.Sponsor"
+    },
+    {
+      "tag": "facility_summary",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Existing facility",
+      "guidance": "Existing facility type, limit and maturity",
+      "preferred_source": "facility summary"
+    },
+    {
+      "tag": "ic_date",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Credit committee date",
+      "guidance": "Credit committee date",
+      "preferred_source": "deals table"
+    },
+    {
+      "tag": "recommendation_short",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Recommendation",
+      "guidance": "Approve / Approve with conditions / Decline",
+      "preferred_source": "agent"
+    },
+    {
+      "tag": "request_summary",
+      "section": "1. Request",
+      "kind": "text",
+      "alias": "Request summary",
+      "guidance": "State exactly what the borrower is asking to change, why, and what it offers in return.",
+      "preferred_source": "variation or upsize request letter"
+    },
+    {
+      "tag": "existing_facility_table",
+      "section": "2. Existing facility",
+      "kind": "table",
+      "alias": "Existing facility terms",
+      "guidance": "Table of the existing facility terms as approved.",
+      "preferred_source": "facility summary"
+    },
+    {
+      "tag": "performance_commentary",
+      "section": "3. Performance since drawdown",
+      "kind": "text",
+      "alias": "Performance since drawdown",
+      "guidance": "Describe performance against the original plan: leasing or trading, valuation and anything that has changed.",
+      "preferred_source": "leasing report; management accounts; valuation update"
+    },
+    {
+      "tag": "performance_chart",
+      "section": "3. Performance since drawdown",
+      "kind": "image",
+      "alias": "Performance chart",
+      "guidance": "Chart of performance against plan (occupancy, EBITDA or similar).",
+      "preferred_source": "source figure"
+    },
+    {
+      "tag": "current_covenant_metric",
+      "section": "4. Covenant compliance",
+      "kind": "metric",
+      "alias": "Tightest covenant (actual)",
+      "guidance": "e.g. 1.28x",
+      "preferred_source": "compliance certificate; metric views"
+    },
+    {
+      "tag": "covenant_headroom",
+      "section": "4. Covenant compliance",
+      "kind": "metric",
+      "alias": "Headroom",
+      "guidance": "e.g. 0.03x",
+      "preferred_source": "compliance certificate"
+    },
+    {
+      "tag": "covenant_table",
+      "section": "4. Covenant compliance",
+      "kind": "table",
+      "alias": "Covenant compliance",
+      "guidance": "Table of each covenant: requirement, latest actual, headroom, and pro forma after the variation.",
+      "preferred_source": "compliance certificate; metric views"
+    },
+    {
+      "tag": "covenant_commentary",
+      "section": "4. Covenant compliance",
+      "kind": "text",
+      "alias": "Covenant commentary",
+      "guidance": "Comment on headroom now and after the proposed change.",
+      "preferred_source": "compliance certificate; pipeline or request note"
+    },
+    {
+      "tag": "revised_terms_table",
+      "section": "5. Proposed revised terms",
+      "kind": "table",
+      "alias": "Revised terms",
+      "guidance": "Table of terms that change: current, requested and recommended.",
+      "preferred_source": "request letter; facility summary"
+    },
+    {
+      "tag": "risks_table",
+      "section": "6. Risks and mitigants",
+      "kind": "table",
+      "alias": "Risks and mitigants",
+      "guidance": "Table of key risks of agreeing to the variation and mitigants.",
+      "preferred_source": "all sources"
+    },
+    {
+      "tag": "recommendation",
+      "section": "7. Recommendation and conditions",
+      "kind": "text",
+      "alias": "Recommendation",
+      "guidance": "State the recommendation and its rationale.",
+      "preferred_source": "agent; request letter"
+    },
+    {
+      "tag": "variation_conditions",
+      "section": "7. Recommendation and conditions",
+      "kind": "text",
+      "alias": "Conditions of the variation",
+      "guidance": "List the conditions attached to the variation.",
+      "preferred_source": "request letter; facility summary"
+    }
+  ]
+}

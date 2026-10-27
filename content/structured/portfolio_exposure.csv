@@ -1,0 +1,45 @@
+loan_id,borrower,sponsor,sector,sub_sector,state,fund,facility_limit,drawn_balance,ranking,lvr,maturity,status,book_total_commitments
+QCP-L-1001,Arden Freight Pty Ltd,Arden Group,Corporate,Transport and logistics,NSW,SLF,88400000.0,80500000.0,Senior,,2027-01-01,Performing,3356800000.0
+QCP-L-1002,Brookvale Health Pty Ltd,Brookvale Group,Corporate,Healthcare,NSW,OPF,55200000.0,46800000.0,Senior,,2028-06-01,Performing,3356800000.0
+QCP-L-1003,Coral Coast Resorts Pty Ltd,Coral Group,Real estate,Investment,QLD,SLF,75500000.0,41500000.0,Senior,0.539,2029-11-01,Performing,3356800000.0
+QCP-L-1004,Dunmore Foods Pty Ltd,Dunmore Group,Corporate,Consumer,VIC,SLF,55200000.0,32400000.0,Senior,,2030-04-01,Performing,3356800000.0
+QCP-L-1005,Everton Energy Pty Ltd,Everton Group,Infrastructure,Energy transition,NSW,Wholesale,38700000.0,29500000.0,Senior,,2027-09-01,Performing,3356800000.0
+QCP-L-1006,Fernhill Aged Care Pty Ltd,Fernhill Group,Corporate,Healthcare,SA,REF,110500000.0,109400000.0,Senior,,2028-02-01,Performing,3356800000.0
+QCP-L-1007,Glenrock Quarries Pty Ltd,Glenrock Group,Corporate,Industrials,QLD,Wholesale,62600000.0,38600000.0,Senior,,2029-07-01,Performing,3356800000.0
+QCP-L-1008,Hollis Data Centres Pty Ltd,Hollis Group,Infrastructure,Digital infrastructure,QLD,SLF,88400000.0,59800000.0,Subordinated,,2030-12-01,Performing,3356800000.0
+QCP-L-1009,Ivanhoe Retail Trust Pty Ltd,Ivanhoe Group,Real estate,Investment,QLD,SLF,55200000.0,34300000.0,Senior,0.588,2027-05-01,Performing,3356800000.0
+QCP-L-1010,Juniper Childcare Pty Ltd,Juniper Group,Corporate,Childcare,SA,REF,82800000.0,73000000.0,Senior,,2028-10-01,Performing,3356800000.0
+QCP-L-1011,Kestrel Industrial Park Pty Ltd,Kestrel Group,Real estate,Construction,NZ,SLF,32200000.0,24900000.0,Senior,0.512,2029-03-01,Performing,3356800000.0
+QCP-L-1012,Lyndale Agri Pty Ltd,Lyndale Group,Corporate,Agribusiness,VIC,OPF,101200000.0,100600000.0,Senior,,2030-08-01,Performing,3356800000.0
+QCP-L-1013,Marlow Hotels Pty Ltd,Marlow Group,Real estate,Investment,VIC,SLF,32200000.0,27500000.0,Subordinated,0.544,2027-01-01,Performing,3356800000.0
+QCP-L-1014,Northgate Medical Pty Ltd,Northgate Group,Corporate,Healthcare,NSW,REF,32200000.0,20700000.0,Senior,,2028-06-01,Performing,3356800000.0
+QCP-L-1015,Oakridge Estates Pty Ltd,Oakridge Group,Real estate,Land subdivision,VIC,SLF,44200000.0,25800000.0,Senior,0.542,2029-11-01,Performing,3356800000.0
+QCP-L-1016,Pemberton Wind Pty Ltd,Pemberton Group,Infrastructure,Energy transition,NSW,Wholesale,50600000.0,40000000.0,Senior,,2030-04-01,Performing,3356800000.0
+QCP-L-1017,Quayside Office Trust Pty Ltd,Quayside Group,Real estate,Investment,ACT,SLF,69000000.0,42200000.0,Subordinated,0.614,2027-09-01,Performing,3356800000.0
+QCP-L-1018,Redgum Schools Pty Ltd,Redgum Group,Infrastructure,Social infrastructure,VIC,OPF,110500000.0,79500000.0,Senior,,2028-02-01,Performing,3356800000.0
+QCP-L-1019,Saltbush Solar Pty Ltd,Saltbush Group,Infrastructure,Energy transition,SA,SLF,55200000.0,49500000.0,Senior,,2029-07-01,Performing,3356800000.0
+QCP-L-1020,Tasman Freight Pty Ltd,Tasman Group,Corporate,Transport and logistics,NSW,REF,38700000.0,31100000.0,Senior,,2030-12-01,Performing,3356800000.0
+QCP-L-1021,Umber Pharmacy Group Pty Ltd,Umber Group,Corporate,Consumer,ACT,OPF,32200000.0,18400000.0,Senior,,2027-05-01,Performing,3356800000.0
+QCP-L-1022,Valemont Waste Pty Ltd,Valemont Group,Infrastructure,Social infrastructure,NSW,SLF,50600000.0,32200000.0,Senior,,2028-10-01,Performing,3356800000.0
+QCP-L-1023,Wattle Grove Estates Pty Ltd,Wattle Group,Real estate,Land subdivision,VIC,SLF,82800000.0,72000000.0,Senior,0.499,2029-03-01,Performing,3356800000.0
+QCP-L-1024,Yarra Valley Wines Pty Ltd,Yarra Group,Corporate,Agribusiness,NSW,OPF,69000000.0,50400000.0,Subordinated,,2030-08-01,Performing,3356800000.0
+QCP-L-1025,Zenith Cold Storage Pty Ltd,Zenith Group,Corporate,Transport and logistics,NSW,OPF,38700000.0,23200000.0,Senior,,2027-01-01,Performing,3356800000.0
+QCP-L-1026,Ashcroft Retirement Pty Ltd,Ashcroft Group,Corporate,Healthcare,VIC,REF,62600000.0,40700000.0,Senior,,2028-06-01,Performing,3356800000.0
+QCP-L-1027,Bellbird Software Pty Ltd,Bellbird Group,Corporate,Technology,NSW,SLF,110500000.0,89900000.0,Subordinated,,2029-11-01,Performing,3356800000.0
+QCP-L-1028,Cobalt Mining Services Pty Ltd,Cobalt Group,Corporate,Industrials,NSW,SLF,55200000.0,42600000.0,Senior,,2030-04-01,Performing,3356800000.0
+QCP-L-1029,Delamere Seniors Living Pty Ltd,Delamere Group,Corporate,Healthcare,QLD,Wholesale,110500000.0,80300000.0,Senior,,2027-09-01,Performing,3356800000.0
+QCP-L-1030,Eastlake Student Living Pty Ltd,Eastlake Group,Real estate,Build-to-rent,NSW,Wholesale,88400000.0,66100000.0,Senior,0.664,2028-02-01,Performing,3356800000.0
+QCP-L-1031,Fairway Self Storage Pty Ltd,Fairway Group,Real estate,Construction,ACT,OPF,62600000.0,36200000.0,Senior,0.486,2029-07-01,Performing,3356800000.0
+QCP-L-1032,Granite Bay Marina Pty Ltd,Granite Group,Real estate,Construction,NZ,Wholesale,62600000.0,36600000.0,Senior,0.667,2030-12-01,Performing,3356800000.0
+QCP-L-1033,Harrow Labs Pty Ltd,Harrow Group,Corporate,Technology,NSW,OPF,55200000.0,33100000.0,Subordinated,,2027-05-01,Performing,3356800000.0
+QCP-L-1034,Inverness Holdings Pty Ltd,Inverness Group,Corporate,Industrials,SA,REF,50600000.0,30300000.0,Senior,,2028-10-01,Performing,3356800000.0
+QCP-RE-2024-0211,Calder Hills Pty Ltd,Calder Property Group,Real estate,Build-to-rent,NSW,REF,62000000.0,62000000.0,Senior,0.302,2026-11-30,Performing,3356800000.0
+QCP-RE-2025-0098,Harbour Rise Developments Pty Ltd,Lindqvist Group,Real estate,Residential apartments,NSW,REF,96500000,59800000.0,Senior,0.56,2028-06-01,Performing,3356800000.0
+QCP-RE-2025-0154,Southbank Yards Pty Ltd,Moreton Capital,Real estate,Build-to-rent,QLD,REF,128000000,79400000.0,Senior,0.652,2028-06-01,Performing,3356800000.0
+QCP-RE-2025-0207,Elm Street Terraces Pty Ltd,Corbett Homes,Real estate,Townhouses,VIC,REF,54300000,33700000.0,Senior,0.59,2028-06-01,Performing,3356800000.0
+QCP-RE-2026-0033,Coastline Living Pty Ltd,Aurelia Property,Real estate,Build-to-rent,QLD,REF,141000000,87400000.0,Senior,0.636,2028-06-01,Performing,3356800000.0
+QCP-RE-2026-0417,Calder Riverside Pty Ltd,Calder Property Group,Real estate,Build-to-rent,NSW,REF,185000000.0,0,Senior,0.582,2029-05-31,Pipeline,3356800000.0
+QCP-CO-2026-0502,Aldgate Logistics Holdings Pty Ltd,Halyard Partners,Corporate,Transport and logistics,NSW,OPF,120000000.0,0,Senior,,,Pipeline,3356800000.0
+QCP-RE-2026-0511,Harbour Point Developments Pty Ltd,Tidewater Communities,Real estate,Land subdivision,QLD,REF,65000000.0,0,Senior,0.549,,Pipeline,3356800000.0
+QCP-CO-2026-0488,Banksia Health Group Pty Ltd,Coolabah Infrastructure Partners,Corporate,Healthcare,NSW,SLF,210000000.0,0,Senior,0.337,2031-11-30,Pipeline,3356800000.0
+QCP-CO-2023-0157,Pinnacle Early Learning Pty Ltd,Pinnacle founders and Stirling Growth Fund,Corporate,Childcare,NSW,SLF,85000000.0,85000000.0,Senior,,2028-08-15,Performing,3356800000.0

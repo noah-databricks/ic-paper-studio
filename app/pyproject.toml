@@ -1,0 +1,33 @@
+[project]
+name = "ic-paper-studio"
+version = "1.0.0"
+description = "IC Paper Studio: Quillwood Credit Partners credit-paper drafting desk with an embedded Omnigent agent"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "databricks-sdk>=0.60",
+  "fastapi",
+  "uvicorn[standard]",
+  "python-multipart",
+  "httpx",
+  "pyyaml",
+  "psutil",
+  "mcp>=1.28,<2",
+  "pymupdf",
+  "pillow",
+  "matplotlib",
+  "python-docx>=1.2",
+  "lxml",
+  "mlflow-skinny[databricks]>=3.6",
+  "omnigent[databricks]==0.16.0.dev0",
+  "omnigent-client==0.16.0.dev0",
+  "omnigent-ui-sdk==0.16.0.dev0",
+  "claude-agent-sdk==0.2.94",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+omnigent = { path = "wheels/omnigent-0.16.0.dev0-py3-none-any.whl" }
+omnigent-client = { path = "wheels/omnigent_client-0.16.0.dev0-py3-none-any.whl" }
+omnigent-ui-sdk = { path = "wheels/omnigent_ui_sdk-0.16.0.dev0-py3-none-any.whl" }

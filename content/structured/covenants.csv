@@ -1,0 +1,15 @@
+deal_id,covenant_name,metric,comparator,threshold,current_value,headroom,testing
+QCP-RE-2026-0417,Loan to value ratio (LVR),LVR,<=,0.6,0.5816,0.0184,On each valuation update and at practical completion
+QCP-RE-2026-0417,Loan to cost ratio (LTC),LTC,<=,0.725,0.7016,0.0234,Monthly with each drawdown request
+QCP-RE-2026-0417,Cost to complete,CTC,>=,1.0,1.04,0.04,Monthly: undrawn facility plus undrawn equity divided by QS-certified cost to complete
+QCP-RE-2026-0417,Practical completion sunset date,PC_DATE,<=,,,,Practical completion by 31 March 2029
+QCP-RE-2026-0417,Retail pre-commitment,RETAIL_PRECOMMIT,>=,0.4,0.0,-0.4,Signed leases over at least 40% of retail NLA before practical completion
+QCP-RE-2026-0417,Projected stabilised ICR,ICR,>=,1.2,1.2588,0.0588,"At practical completion, on lender's assumed refinance terms"
+QCP-CO-2026-0488,Net leverage (net debt / EBITDA),Net leverage,<=,4.0,3.03,0.97,Quarterly (proposed)
+QCP-CO-2026-0488,Interest cover (EBITDA / interest),Interest cover,>=,2.5,3.7,1.2,Quarterly (proposed)
+QCP-CO-2026-0488,LVR (debt / security value),LVR,<=,0.5,0.337,0.163,Quarterly (proposed)
+QCP-CO-2026-0488,Portfolio occupancy,Portfolio occupancy,>=,0.88,0.92,0.04,Quarterly (proposed)
+QCP-RE-2024-0211,LVR (as is valuation),LVR,<=,0.55,0.302,0.248,Quarterly
+QCP-RE-2024-0211,ICR (annualised quarterly NOI / interest),ICR,>=,1.25,1.28,0.03,Quarterly
+QCP-CO-2023-0157,Net leverage (net debt / LTM EBITDA),Net leverage,<=,3.25,2.94,0.31,Quarterly
+QCP-CO-2023-0157,Interest cover (LTM EBITDA / interest),Interest cover,>=,2.5,3.67,1.17,Quarterly

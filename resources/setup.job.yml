@@ -1,0 +1,67 @@
+# Builds the demo's data from the files in this repo: uploads the document library and the deal tables, parses every
+# PDF with ai_parse_document, classifies and extracts each document's facts with AI Functions, builds the AI Search
+# index, links the trace experiment to the schema, grants the app what it needs and restarts it. About 45 minutes.
+resources:
+  jobs:
+    setup:
+      name: ic-paper-studio-setup
+      max_concurrent_runs: 1
+      queue:
+        enabled: true
+      environments:
+        - environment_key: setup
+          spec:
+            client: "4"
+            dependencies:
+              - databricks-sdk==0.151.0
+              - pymupdf==1.28.2
+              - pillow==12.3.0
+              - mlflow-skinny[databricks]==3.17.0
+      tasks:
+        - task_key: workspace
+          environment_key: setup
+          spark_python_task:
+            python_file: ../setup/01_workspace.py
+            parameters: [--root, "${workspace.file_path}", --catalog, "${var.catalog}", --schema, "${var.schema}", --warehouse, "${resources.sql_warehouses.studio_warehouse.id}"]
+        - task_key: parse
+          depends_on: [{task_key: workspace}]
+          environment_key: setup
+          timeout_seconds: 7200
+          spark_python_task:
+            python_file: ../setup/02_parse.py
+            parameters: [--root, "${workspace.file_path}", --catalog, "${var.catalog}", --schema, "${var.schema}", --warehouse, "${resources.sql_warehouses.studio_warehouse.id}"]
+        - task_key: elements
+          depends_on: [{task_key: parse}]
+          environment_key: setup
+          spark_python_task:
+            python_file: ../setup/03_elements.py
+            parameters: [--root, "${workspace.file_path}", --catalog, "${var.catalog}", --schema, "${var.schema}", --warehouse, "${resources.sql_warehouses.studio_warehouse.id}"]
+        - task_key: enrich
+          depends_on: [{task_key: elements}]
+          environment_key: setup
+          timeout_seconds: 7200
+          spark_python_task:
+            python_file: ../setup/05_enrich.py
+            parameters: [--root, "${workspace.file_path}", --catalog, "${var.catalog}", --schema, "${var.schema}", --warehouse, "${resources.sql_warehouses.studio_warehouse.id}"]
+        - task_key: index
+          depends_on: [{task_key: enrich}]
+          environment_key: setup
+          timeout_seconds: 5400
+          spark_python_task:
+            python_file: ../setup/06_index.py
+            parameters: [--root, "${workspace.file_path}", --catalog, "${var.catalog}", --schema, "${var.schema}", --warehouse, "${resources.sql_warehouses.studio_warehouse.id}",
+                         --endpoint, "${resources.vector_search_endpoints.studio_search.name}"]
+        - task_key: traces
+          depends_on: [{task_key: workspace}]
+          environment_key: setup
+          spark_python_task:
+            python_file: ../setup/07_traces.py
+            parameters: [--root, "${workspace.file_path}", --catalog, "${var.catalog}", --schema, "${var.schema}", --warehouse, "${resources.sql_warehouses.studio_warehouse.id}",
+                         --experiment, "${resources.experiments.studio_traces.id}"]
+        - task_key: grants
+          depends_on: [{task_key: index}, {task_key: traces}]
+          environment_key: setup
+          spark_python_task:
+            python_file: ../setup/04_grants.py
+            parameters: [--root, "${workspace.file_path}", --catalog, "${var.catalog}", --schema, "${var.schema}", --warehouse, "${resources.sql_warehouses.studio_warehouse.id}",
+                         --app, "${resources.apps.studio.name}", --endpoint, "${resources.vector_search_endpoints.studio_search.name}"]

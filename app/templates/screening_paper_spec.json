@@ -1,0 +1,119 @@
+{
+  "template": "screening_paper_template.docx",
+  "template_id": "screening",
+  "name": "Initial credit screening paper",
+  "slots": [
+    {
+      "tag": "deal_name",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Deal name",
+      "guidance": "Deal name",
+      "preferred_source": "metric:mv_deal_metrics.Deal"
+    },
+    {
+      "tag": "borrower",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Borrower",
+      "guidance": "Borrower entity",
+      "preferred_source": "metric:mv_deal_metrics.Deal; information memorandum"
+    },
+    {
+      "tag": "sponsor",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Sponsor",
+      "guidance": "Sponsor or owner",
+      "preferred_source": "metric:mv_deal_metrics.Sponsor"
+    },
+    {
+      "tag": "facility_summary",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Request",
+      "guidance": "Facility requested: type, amount, tenor",
+      "preferred_source": "information memorandum; deal intake note"
+    },
+    {
+      "tag": "recommendation_short",
+      "section": "Cover",
+      "kind": "metric",
+      "alias": "Screening outcome",
+      "guidance": "Proceed to diligence / Proceed with conditions / Decline",
+      "preferred_source": "agent"
+    },
+    {
+      "tag": "opportunity_overview",
+      "section": "1. Opportunity",
+      "kind": "text",
+      "alias": "Opportunity overview",
+      "guidance": "Describe the borrower, what is being asked for, the purpose of funds and how the deal came to Quillwood.",
+      "preferred_source": "information memorandum; deal intake note"
+    },
+    {
+      "tag": "borrower_sponsor",
+      "section": "2. Borrower and sponsor",
+      "kind": "text",
+      "alias": "Borrower and sponsor",
+      "guidance": "Describe the business or project, the sponsor and its track record.",
+      "preferred_source": "information memorandum; management presentation; sponsor IM"
+    },
+    {
+      "tag": "financials_table",
+      "section": "2. Borrower and sponsor",
+      "kind": "table",
+      "alias": "Financial summary",
+      "guidance": "Table of historical and pro forma financials (corporate) or project costs and values (real estate).",
+      "preferred_source": "summary financials; sponsor IM; desktop valuation"
+    },
+    {
+      "tag": "key_chart",
+      "section": "2. Borrower and sponsor",
+      "kind": "image",
+      "alias": "Key chart",
+      "guidance": "One chart or figure that best explains the opportunity (earnings trend, site plan or market).",
+      "preferred_source": "source figure; metric view chart"
+    },
+    {
+      "tag": "headline_leverage",
+      "section": "3. Indicative credit metrics",
+      "kind": "metric",
+      "alias": "Indicative leverage",
+      "guidance": "Net debt / EBITDA or LVR",
+      "preferred_source": "metric:mv_corporate_credit.Leverage; metric:mv_deal_metrics.LVR"
+    },
+    {
+      "tag": "headline_coverage",
+      "section": "3. Indicative credit metrics",
+      "kind": "metric",
+      "alias": "Indicative coverage",
+      "guidance": "Interest cover or LTC",
+      "preferred_source": "metric:mv_corporate_credit.Interest cover; metric:mv_deal_metrics.LTC"
+    },
+    {
+      "tag": "metrics_table",
+      "section": "3. Indicative credit metrics",
+      "kind": "table",
+      "alias": "Indicative metrics",
+      "guidance": "Table of the indicative credit metrics on the information available, with the source of each.",
+      "preferred_source": "metric views; summary financials"
+    },
+    {
+      "tag": "risks_questions_table",
+      "section": "4. Initial risks and questions",
+      "kind": "table",
+      "alias": "Risks and diligence questions",
+      "guidance": "Table of the main risks and the question diligence must answer for each.",
+      "preferred_source": "intake note; industry or market note"
+    },
+    {
+      "tag": "next_steps",
+      "section": "5. Screening recommendation",
+      "kind": "text",
+      "alias": "Recommendation and next steps",
+      "guidance": "State whether to proceed, on what terms in principle, and the diligence needed (with budget if known).",
+      "preferred_source": "deal intake note"
+    }
+  ]
+}

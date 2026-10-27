@@ -1,0 +1,43 @@
+# IC Paper Studio: an agent that drafts credit papers into a lender's own Word templates, quoting its sources, with the
+# analyst reviewing every section. Synthetic lender, deals and document library.
+#
+#   databricks bundle deploy --var catalog=<catalog> && databricks bundle run setup
+#
+# See README.md.
+bundle:
+  name: ic-paper-studio
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: An existing Unity Catalog catalog you can create a schema in (you need USE CATALOG and CREATE SCHEMA).
+  schema:
+    description: Schema the demo creates for its tables, volumes, metric views, search index and traces.
+    default: ic_paper_studio
+  app_name:
+    description: Name of the Databricks App.
+    default: ic-paper-studio
+  search_endpoint:
+    description: Name of the AI Search endpoint the bundle creates for the document index.
+    default: ic-paper-search
+
+sync:
+  include:
+    - app/static/dist/**
+  exclude:
+    - "ui/**"
+    - "docs/**"
+    - "eval/**"
+
+targets:
+  default:
+    default: true
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}
+    presets:
+      tags:
+        demo: ic-paper-studio
+        data_class: synthetic
